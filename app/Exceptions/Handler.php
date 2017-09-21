@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Exceptions;
+namespace hkbp\Exceptions;
 
 use Exception;
 use Illuminate\Auth\AuthenticationException;
