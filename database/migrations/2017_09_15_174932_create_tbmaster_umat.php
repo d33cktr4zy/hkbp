@@ -36,10 +36,10 @@ class CreateTbmasterUmat extends Migration
             $table->smallInteger('umat_statusjemaat')->unsigned();
             $table->smallInteger('umat_jabatangereja')->nullable()->unsigned();
             $table->smallInteger('umat_jabatanorgangereja')->nullable()->unsigned();
-            $table->string('umat_kk',20);
+            $table->string('umat_kk',20)->nullable();
             $table->boolean('umat_iskk');
-            $table->string('umat_namaayah',50);
-            $table->string('umat_namaibu',50);
+            $table->string('umat_namaayah',50)->nullable();
+            $table->string('umat_namaibu',50)->nullable();
             $table->string('umat_createby',10);
             $table->date('umat_createdt');
             $table->string('umat_modifyby',10)->nullable();

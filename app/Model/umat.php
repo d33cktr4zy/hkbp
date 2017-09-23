@@ -42,6 +42,8 @@ class umat extends Model
         'umat_statusjemaat',
         'umat_jabatangereja',
         'umat_jabatanorgangereja',
+        'umat_kk',
+        'umat_iskk',
         'umat_namaayah',
         'umat_namaibu',
         'umat_createby',
