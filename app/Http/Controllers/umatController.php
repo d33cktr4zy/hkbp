@@ -14,4 +14,17 @@ class umatController extends Controller
 
         return $data;
     }
+
+    /**
+     * @param $noreg
+     *
+     * Memanggil detail satu umat menggunakan nomer registrasi umat
+     */
+    public function umatNomer($noreg)
+    {
+        $dataUmat = umat::where('umat_noreg', $noreg)->first();
+
+        /** @var TYPE_NAME $dataUmat */
+        return $dataUmat;
+    }
 }
