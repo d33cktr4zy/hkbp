@@ -1,3 +1,15 @@
+        <div class="row" id="footer">
+            <div class="col-md-12">
+
+                <hr />
+                <span class="glyphicon glyphicon-copyright-mark pull-right text-muted text-lowercase lead" style="font-size: x-small">
+                    <small class="pull-right text-muted">
+                        gabriel.fermy@gmail.com | 2017
+                    </small>
+                </span>
+            </div>
+        </div>
+    </div> <!-- Closing 'content' Container -->
 </div> <!-- Closing 'body' Container -->
 
 <!-- Bootstrap core JavaScript

@@ -12,7 +12,8 @@ class umatController extends Controller
     {
         $data = umat::all();
 
-        return $data;
+        return view('showAllUmat');
+//        return $data;
     }
 
     /**

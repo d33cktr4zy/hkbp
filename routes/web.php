@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('frontpage');
 });
 
+Route::get('test/{view}', function($view){
+   return view($view);
+});
+
 Route::get('semuaUmat', 'umatController@semuaumat');
 
 Route::get('cariUmat', 'umatController@cariUmat');
