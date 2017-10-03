@@ -20,7 +20,9 @@ Route::get('test/{view}', function($view){
 });
 
 Route::get('semuaUmat', 'umatController@semuaumat');
-
+Route::get('cariUmat', 'umatController@cariUmat');
+Route::post('cariUmat', 'umatController@cariUmat');
+Route::get('detailUmat/{regid}', 'umatController@oneUmat');
 Route::get('cariUmat', 'umatController@cariUmat');
 
 //========================================================
@@ -67,7 +69,20 @@ Route::get('dataKeluarga','umatController@dataKeluarga');
 //== Akan menampilkan data umat yang pindah 30 umat terakhir.
 //== Memiliki pilihang range tanggal yang ingin dicari.
 //== Memungkinkan melihat data umat yang pindah pada range tanggal tertentu.
-Route::get('dataUmatPindah', 'umatController@dataPindah');
+Route::prefix('pindah')->group(function()
+{
+    //Tampilkan form perpindahan baru
+    Route::get('baru', 'pindahController@add');
+
+    //Tampilkan form pengubahan data dengan berdasarkan id umat
+    Route::get('edit/umat/{idUmat}', 'pindahController@editUmat');
+
+    //Tampilkan Form pengubahan data dengan menggunakan regid record pindah
+    Route::get('edit/{regid}', 'pindahController@edit');
+
+    //Tampilkan Table Data umat pindah
+    Route::get('dataUmatPindah', 'umatController@dataPindah');
+});
 
 //===========================================
 //== Data Umat Meninggal Dunia
@@ -75,7 +90,10 @@ Route::get('dataUmatPindah', 'umatController@dataPindah');
 //== Menampilkan data umat yang telah meninggal dunia. (30 Umat terakhir)
 //== Memungkinkan melihat data umat yang meninggal pada range tanggal tertentu.
 //===========================================
-Route::get('dataUmatMeninggal', 'umatController@dataMeninggal');
+Route::prefix('meninggal')->group(function()
+{
+   Route::get('dataUmatMeninggal', 'umatController@dataMeninggal');
+});
 
 
 //===========================================

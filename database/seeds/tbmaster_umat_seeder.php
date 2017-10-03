@@ -18,7 +18,7 @@ class tbmaster_umat_seeder extends Seeder
                 'umat_namadepan'            => $faker->firstName(),
                 'umat_namabelakang'         => $faker->lastName(),
                 'umat_namatengah'           => $faker->optional()->firstName(),
-                'umat_alamat'               => 'Jl. Menteng' + ' ' + $faker->numberBetween(1,7) + ' No. ' + $faker->randomDigitNotNull(),
+                'umat_alamat'               => 'Jl. Menteng ' . $faker->numberBetween(1,7) . ' No. ' . $faker->randomDigitNotNull(),
                 'umat_nomorhp'              => '08' + $faker->randomElement($array = ['12','56','17','31','21','22']) + $faker->numerify('#######'),
                 'umat_tplahir'              => $faker->randomElement($array = ['Medan', 'Tapanuli', 'Binjai','Sipirok',]),
                 'umat_tglahir'              => $faker->dateTimeBetween($startDate= '-60 years', $endDate = '-10 years'),

@@ -108,12 +108,60 @@ class umat extends Model
     //with tbtr_baptis
     public function dibaptis()
     {
-        return $this->belongsTo('hkbp\Model\baptis', 'bap_idumat','umat_regid');
+        return $this->hasOne('hkbp\Model\baptis','bap_idumat', 'umat_regid');
     }
 
+    //with tbtr_sidi
+    public function naikSidi()
+    {
+        return $this->hasOne('hkbp\Model\sidi', 'sidi_idumat', 'umat_regid');
+    }
+
+    //with tbtr_nikah
+    public function menikah()
+    {
+        return $this->hasOne('hkbp\Model\nikah', 'nik_idumat', 'umat_regid');
+    }
+
+    //with tbtr_pindah
+    public function pindah()
+    {
+        return $this->hasOne('hkbp\Model\pindah', 'pin_idumat', 'umat_regid');
+    }
+
+    //with tbtr_masuk
+    public function masuk()
+    {
+        return $this->hasOne('hkbp\Model\masuk', 'msk_idumat', 'umat_regid');
+    }
+
+    public function wilayah()
+    {
+        return $this->belongsTo('hkbp\Model\wilayah',  'umat_wilayah', 'wil_id');
+    }
+
+    //with tbadd_statusjemaat
+    public function status()
+    {
+        return $this->hasOne('hkbp\Model\statusjemaat', 'status_id', 'umat_statusjemaat');
+    }
     //with tbmaster_dll
     public function dll()
     {
         return $this->hasMany('hkbp\Model\dll', 'dll_idumat', 'umat_regid');
     }
+
+    //jabatan
+    public function jabatan()
+    {
+        return $this->hasOne('hkbp\Model\jabatangereja', 'jabg_id', 'umat_jabatangereja');
+    }
+
+    //jabatan organisasi
+    public function jabatanOrganisasi()
+    {
+    return $this->hasOne('hkbp\Model\jabatanorgangereja', 'jabog_id', 'umat_jabatanorgangereja');
+    }
+
+
 }
