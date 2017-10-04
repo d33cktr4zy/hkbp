@@ -19,6 +19,8 @@ Route::get('test/{view}', function($view){
    return view($view);
 });
 
+//TODO:
+
 Route::get('semuaUmat', 'umatController@semuaumat');
 Route::get('cariUmat', 'umatController@cariUmat');
 Route::post('cariUmat', 'umatController@cariUmat');
@@ -126,7 +128,7 @@ Route::prefix('admin')->group(function(){
 //== (DE, MG, ADM)
 //==------------------
 //== Buat Keluarga Baru
-    Route::get('setFam','keluargaController@add');
+    Route::get('setFam','keluargaController@add')->name('buatKeluarga');
 
 //==-------------------
 //== Ubah data Keluarga

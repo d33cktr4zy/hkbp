@@ -21,6 +21,15 @@ class keluarga extends Model
      * @var array
      */
     //protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = [
+        'kk_regno',
+        'kk_idumat',
+        'kk_pindah',
+        'kk_createby',
+        'kk_createdt',
+        'kk_modifyby',
+        'kk_modifydt',
+    ];
 
     /**
      * The attributes excluded from the model's JSON form.

@@ -160,7 +160,7 @@ class umat extends Model
     //jabatan organisasi
     public function jabatanOrganisasi()
     {
-    return $this->hasOne('hkbp\Model\jabatanorgangereja', 'jabog_id', 'umat_jabatanorgangereja');
+    return $this->hasOne('hkbp\Model\jabatanorgangereja', 'jabog_id',                           'umat_jabatanorgangereja');
     }
 
 
